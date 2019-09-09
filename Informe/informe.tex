@@ -274,36 +274,150 @@ En este informe se pretende discutir sobre las interfaces diseñadas para cumpli
 
 \section{Interfaz n°1: Landing Page}
 
+Para esta interfaz se trabajara con los requisitos 15 al 28 que se encuentran en el documento ``Requisitos'' proporcionado por el cuerpo docente.\\
+
+Se dividirá la explicación en cuatro secciones. Se tendrá la sección ``tiempo'', acaparando los requisitos 15 al 18, los cuales proponen funcionalidades relacionados con el tiempo de la actividad, ya sea pausando, deteniendo, entre otras. Se seguirá con la sección ``actividades'', abarcando los requisitos 19 y 20, que se refieren a la confirmación de la actividad realizada, validando los datos y evitando que estas se traslapen. A continuación se tendrá la sección ``grilla'', tomando los requisitos 21 al 26 que, como su nombre indica, toma las características que corresponden a la grilla, ya sea avanzar/retroceder por mes/semana, realizar filtros, entre otras. Se finalizara con la sección ``resumen'', tomando los requisitos 27 y 28, que abarcan las características tanto del resumen de las actividades del usuario como el resumen de las actividades de los amigos del usuario.\\
+
+\begin{itemize}
+    \item Sección ``tiempo''.\\
+    
+    El requisito 15 pide que se muestre un reloj cuando se quiere registrar una actividad en tiempo real, el cual se muestra a la derecha de la pantalla con tres tiempos los cuales nos indican, en el primero, el tiempo que ha transcurrido desde que inicio la actividad y que se actualiza a tiempo real, en el segundo, el tiempo estimado, el cual se mantiene en 0 al inicio hasta que se indique un tiempo en el cuadro de actividad ubicado a la izquierda del cuadro de los tiempos. Si se indica un tiempo, este se mantendrá fijo hasta que la actividad termine. Por ultimo, se tiene la diferencia de tiempo entre el tiempo estimado y el tiempo transcurrido, el cual cambiara de color una vez que la diferencia de tiempo sea 0 y comenzara a contar en reversa. A final de este cuadro se tendrá un botón ``Empezar'' de color verde, el cual iniciara el cronometro en el tiempo transcurrido. En la Figura \ref{noIniciado} se puede apreciar como se ve el cuadro tiempo mientras no hay alguna actividad realizándose\\
+    
+    El requisito 16 pide que exista un botón para pausar/reanudar en un actividad en tiempo real. Al hacer clic en el botón ``Empezar'', aparecerán dos botones reemplazando al mencionado anteriormente, uno de ellos sera el botón que nos pide el requisito, el cual se ubicara al lado izquierdo, sera de color amarillo y mostrara los textos ``pausar'', en caso de que el cronometro del tiempo transcurrido este avanzando , o ``reanudar'' en caso de que dicho cronometro ya este pausado, siendo azul el color de este ultimo botón. En las Figuras \ref{transcurrido} y \ref{pausado} se puede apreciar estas características respectivamente\\
+    
+    El requisito 17 pide considerar los tiempos pausados como parte de la actividad, para ello cada vez que se pausa la actividad, el cronometro del tiempo transcurrido cambiara de color. Una vez que dicha actividad se reanude, volverá a su color por defecto. Nuevamente en la Figura \ref{pausado} se puede apreciar el cambio de color que tiene el cronometro al estar pausada dicha actividad.\\
+    
+    El requisito 18 pide que exista un botón para finalizar una actividad. Este requisito función de la misma forma que el requisito 16, ya que el segundo botón que aparece es el botón ``finalizar'', de color rojo y que cumple con la función pedida al momento de darle clic. En la Figura \ref{transcurrido} se puede apreciar el botón pedido\\
+    
+    \item Sección ``actividades''.
+    
+    El requisito 19 nos pide editar y confirmar los datos de la actividad realizada. Para ello se tiene el botón ``finalizar'', el cual, como su nombre lo dice, finalizara la actividad realizada. Al presionar dicho botón, los campos del cuadro actividad volverán a ser modificables, permitiendo cualquier cambio que el usuario quisiera aplicar a la actividad. Luego de esto, al presionar el botón confirmar, el sistema enviara una alerta preguntando pidiendo una confirmación final por parte del usuario, para así poder registrar la actividad en cuestión.\\
+    
+    El requisito 20 pide que no se puedan traslapar actividades mientras el usuario termina de registrar una actividad. Similar al requisito anterior, el sistema enviara una alerta al usuario dándole conocimiento de que se encuentra traslapando una actividad y que no es posible registrar dicha actividad, por lo que el usuario tendrá que cambiar la hora de la actividad que esta registrando.\\
+    
+    \item Sección ``grilla''\\
+    
+    El requisito 21 pide colores diferentes para actividades de diferente categoría. En la Figura \ref{grilla} se puede apreciar que una actividad del tipo ocio esta representado de color rojo. Similar para las otras categorías, cada una tiene un color especifico asignado.\\
+    
+    El requisito 22 pide mostrar las actividades de la semana por defecto, lo cual aplica ingresando a la pagina, ya que esta configurada para que muestre la semana actual por defecto.\\
+    
+    El requisito 23 pide filtros por categoría en la grilla, el cual se puede aplicar gracias al menú desplegable que esta arriba a la izquierda de la grilla, en el cual se puede seleccionar una de las categorías especificadas.\\
+    
+    El requisito 24 pide avanzar o retroceder por semana/mes junto con el filtro aplicado. El filtro se mantendrá aplicado hasta que el usuario desee modificarlo, mientras que en la esquina superior izquierda se encontrara la selección de fecha, el cual permite retroceder entre meses. Al seleccionar un día de alguna semana, el sistema desplegara la grilla con la información de dicha semana.\\
+    
+    El requisito 25 pide seleccionar celdas para registrar una actividad a posteriori. Al pinchar dichas celdas, automáticamente se llenara el campo de tiempo estimado del cuadro actividad, solo faltaría que el usuario complete el resto de la información y registrar la actividad.\\
+    
+    El requisito 26 pide acceder a la ficha de las actividades ya registradas en la grilla. Este requisito se complementa con en requisito 43. Para cumplir con esta función se debe pinchar una actividad de la grilla, al momento de pincharla desplegara una nueva ventana con la información de la actividad. Este ultimo punto se tocara en la Interfaz n°3 de este informe.\\
+    
+    \item Sección ``resumen''.\\
+    
+    El requisito 27 pide mostrar un resumen de los tiempos por actividad, mientras que el 28 pide mostrar en promedio el resumen de actividad de los amigos. Para ello es necesario pinchar la pestaña resumen, esto desplegara dos tablas, una con la información personal del promedio de horas por categoría, la otra con la información de los amigos del usuario, específicamente el promedio y desviación estándar de estos datos. En la Figura \ref{resumen}, se puede apreciar el diseño de las tablas de actividades\\
+    
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.38]{tiempoNoIniciado.jpg} 
+\caption{Muestra del estado del tiempo mientras no se realiza una actividad}
+\label{noIniciado}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.38]{tiempoTranscurrido.jpg} 
+\caption{Muestra de tiempo en una actividad a tiempo real}
+\label{transcurrido}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.29]{tiempoPausado.jpg} 
+\caption{Muestra de tiempo mientras una actividad esta pausada}
+\label{pausado}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.38]{grilla.jpg} 
+\caption{Muestra de colores de la grilla}
+\label{grilla}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.38]{resumen.jpg} 
+\caption{Muestra del resumen de actividades}
+\label{resumen}
+\end{figure}
+
 \newpage
 
 \section{Interfaz n°2: Perfil del usuario}
 
-Para esta sección se trabajara con los requisitos 29 al 39 que se encuentran en el documento ``Requisitos'', el cual fue proporcionado por el cuerpo docente.\\
+Para esta interfaz se trabajara con los requisitos 29 al 39 que se encuentran en el documento ``Requisitos'', el cual fue proporcionado por el cuerpo docente.\\
 
 Dividiremos estos requisitos en tres secciones. El primero sera denominado ``perfi'', que acapara los requisitos que afectan directamente a los datos del usuario, abarcando los requisitos 29 al 31. Seguido, se tendrá la sección ``tareas'', enfocándose, tal como dice su nombre, en el registro de tareas y/o actividades, incluyendo solamente el requisito 32. Para finalizar, se tiene la sección ``amigos'', que contiene la interacción del usuario con su lista de amigos, solicitudes pendientes, búsqueda de personas, entre otros. Esta última sección engloba los requisitos 33 al 39.\\
 
 \begin{itemize}
     \item Sección ``perfil''.\\
     
-    El requisito 29, que nos pide mostrar la información del usuario, se puede apreciar en casi toda la pantalla, específicamente, al centro, movido un poco a la derecha, mostrando nombre, apellido, correo electrónico y nombre de usuario. En dicho requisito también se pide la foto de perfil del usuario, la cual se puede ver al lado izquierdo los datos del usuario.\\
+    El requisito 29, que pide mostrar la información del usuario, se puede apreciar en casi toda la pantalla, específicamente, al centro, movido un poco a la derecha, mostrando nombre, apellido, correo electrónico y nombre de usuario. En dicho requisito también se pide la foto de perfil del usuario, la cual se puede ver al lado izquierdo los datos del usuario.\\
     
-    El requisito 30 pide que sea posible cambiar la foto de perfil del usuario, esta acción es posible con el botón azul ``Change Photo'' que se encuentra inmediatamente debajo de la foto de perfil.\\
+    El requisito 30 pide que sea posible cambiar la foto de perfil del usuario, esta acción es posible con el botón azul ``Cambiar foto'' que se encuentra inmediatamente debajo de la foto de perfil.\\
     
-    El requisito 31 pide que sea posible cambiar la contraseña, [PENDIENTE]\\
+    El requisito 31 pide que sea posible cambiar la contraseña, lo cual se realiza al apretar el botón con forma de engranaje arriba a la derecha, con lo cual cambia la información del usuario por dos barras en las cuales se debe escribir la antigua contraseña, luego la contraseña nueva, y apretar confirmar cambio para finalizar el proceso.\\
     
     \item Sección ``tareas''.\\
     
-    Esta sección solo tiene un requisito asociado, el cual es el requisito 32, donde nos pide registrar actividades ``tipo'' o estándares. Para este requisito se tiene un cuadro de actividades debajo de la foto de perfil, en este cuadro se tendrá un botón ``+'' en la esquina superior derecha, al lado del título ``Actividades'', el cual permitirá añadir una actividad con sus correspondientes características. Abajo del título, se podrá ver las tareas y/o actividades registradas y a la derecha de cada actividad se puede apreciar un botón que permite modificar las características de dicha actividad.\\
+    Esta sección solo tiene un requisito asociado, el cual es el requisito 32, donde nos pide registrar actividades ``tipo'' o estándares. Para este requisito se tiene un cuadro de actividades debajo de la foto de perfil, en este cuadro se tendrá un botón ``+'' en la esquina superior derecha, al lado del título ``Actividades'', el cual permitirá añadir una actividad con sus correspondientes características. Abajo del título, se podrá ver las tareas y/o actividades registradas y a la derecha de cada actividad se puede apreciar un botón que permite modificar las características de dicha actividad. Cada actividad tendrá un rectángulo del color correspondiente a su categoría.\\
     
     \item Sección ``amigos''.\\
     
-    [Pendiente]
+    Debajo de la información del usuario, se tiene la lista de sus amigos. En cada columna sale la foto de su amigo, su nombre, y al final un botón que permite acceder a dos opciones: visitar perfil o eliminar amigo. Si se elige visitar la pagina simplemente se accede al perfil del amigo, y si se elige eliminar amigo, aparece un cuadro que pide confirmación para esto. Con esto se cumplen los requisitos 33 y 34. \\
+    
+    En esta misma lista, hay un botón en la esquina superior derecha, en la cual sale una notificación que indica cuantas solicitudes de datos tiene el usuario. Al presionar este botón, la lista de amigos cambia por la lista de personas que ha solicitado su información, y en cada persona al final hay una check y una cruz, con el check aceptas la solicitud y con la cruz la rechaza, cumpliendo con esto los requisitos 35 y 36.\\
+    
+    En la parte superior izquierda hay un buscador, en el cual al escribir un nombre, te sugiere personas a las cuales solicitar sus datos. De estas se elige presionando un cuadro en el cual aparecerá un check al apretarse, para luego solicitar los datos de todos los seleccionados. Con esto se tienen los requisitos 37 y 38.\\
+    
+    Finalmente, en todos los menú donde aparecen perfiles, al apretar en su foto se puede acceder a su perfil, con lo que se tiene el requisito final, el 39, para esta interfaz. \\
+    
+    En la Figura \ref{perfil} se puede apreciar el perfil del usuario ya logeado, mientras que en la Figura \ref{contraseña} se puede ver el perfil cuando el usuario solicita cambiar su contraseña. Para finalizar, en la Figura \ref{busqueda} se puede ver la lista de usuarios cuando se ingresa un nombre en el campo de búsqueda.\\
     
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{perfil.jpg} 
+\caption{Muestra del perfil de usuario}
+\label{perfil}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{contrasena.jpg} 
+\caption{Muestra de cambio de contraseña}
+\label{contraseña}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{busqueda.jpg} 
+\caption{Muestra de la búsqueda de personas en el perfil del usuario}
+\label{busqueda}
+\end{figure}
 
 \newpage
 
 \section{Interfaz n°3: datos de una actividad}
+
+Esta interfaz contempla el requisito 43 del documento ``Requisitos'' que fue proporcionado por el cuerpo docente. Dicho requisito nos pide indicar los datos de una actividad en forma de ficha. Cada tarea/actividad colocada en la grilla al hacerle clic mostrara en una nueva ventana la ficha de dicha actividad. En esta ficha se mostrara la información de dicha actividad pedida por el requisito en cuestión. En la Figura \ref{ficha} se puede apreciar la ficha y su descripción.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{ficha.jpg} 
+	\caption{Ficha de actividad}
+	\label{ficha}
+\end{figure}
 
 % FIN DEL DOCUMENTO
 \end{document}
