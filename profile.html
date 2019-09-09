@@ -16,12 +16,13 @@
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
+    <div id="wrapper" style="border-left: 2em solid #0069d9;">
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><button class="btn btn-primary" type="button"><i class="fa fa-reorder"></i></button>
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+                            style="margin-top: 0px;">
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Buscar amigos">
                                 <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
                             </div>
@@ -227,9 +228,9 @@
                                     <div class="row .d-flex">
                                         <div class="col" style="display: flex;justify-content: space-between;margin-left: 13px;margin-right: 11px;">
                                             <h1>Amigos</h1>
-                                            <div class="dropdown no-arrow"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 6px;"><span class="badge badge-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></button>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in" role="menu">
+                                            <div class="dropdown no-arrow"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 6px;"><i class="fas fa-bell fa-fw"></i></button>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                                    role="menu">
                                                     <h6 class="dropdown-header">alerts center</h6>
                                                     <a class="d-flex align-items-center dropdown-item" href="#">
                                                         <div class="mr-3">
@@ -255,32 +256,32 @@
                                                             <p>Spending Alert: We've noticed unusually high spending for your account.</p>
                                                         </div>
                                                     </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Alerts</a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item" style="display:flex;justify-content:space-between;">
-                                        <div><img><span>Alejandro Bergolio</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
-                                    <li
-                                        class="list-group-item" style="display:flex;justify-content:space-between;">
-                                        <div><img><span>Jacinta Simona</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
+                                    <ul class="list-group">
+                                        <li class="list-group-item" style="display:flex;justify-content:space-between;">
+                                            <div><img src="assets/img/photo_2019-09-09_12-27-51.jpg"><span>Alejandro Bergolio</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
                                         <li
                                             class="list-group-item" style="display:flex;justify-content:space-between;">
-                                            <div><img><span>Luciano Mattei</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
-                                </ul>
+                                            <div><img src="assets/img/photo_2019-09-09_12-27-51.jpg"><span>Jacinta Simona</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
+                                            <li
+                                                class="list-group-item" style="display:flex;justify-content:space-between;">
+                                                <div><img src="assets/img/photo_2019-09-09_12-27-51.jpg"><span>Luciano Mattei</span></div><button class="btn btn-primary" type="button" style="width: 44px;height: 38px;margin: 0px;margin-left: 350px;display:flex;" justify-content="center"><i class="icon ion-android-more-horizontal" style="font-size: 24px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;display:flex;" align="top"></i></button></li>
+                                    </ul>
+                                </div>
+                                <div class="card"></div>
                             </div>
-                            <div class="card"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="bg-white sticky-footer">
-        <div class="container my-auto">
-            <div class="text-center my-auto copyright"><span>Copyright © Pagina Perfil 2019</span></div>
-        </div>
-    </footer>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © Segmentation Fault 2019</span></div>
+            </div>
+        </footer>
     </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
